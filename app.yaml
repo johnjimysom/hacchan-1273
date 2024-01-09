@@ -1,0 +1,17 @@
+application: hacchan-1273
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: (.*)/
+  static_files: i-8\1/index.html
+  upload: i-8/index.html
+
+- url: /
+  static_dir: i-8
